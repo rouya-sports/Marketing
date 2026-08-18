@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ROUYA | رؤية للتسويق الرياضي — استراتيجيات، محتوى، تسويق رقمي، بناء علامات تجارية وشراكات رياضية.">
+  <title>ROUYA | رؤية للتسويق الرياضي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050708;
+      --bg2:#0a0f0c;
+      --card:rgba(255,255,255,.045);
+      --line:rgba(154,235,52,.18);
+      --green:#8ee52f;
+      --green2:#4f9f1e;
+      --gold:#d8b75c;
+      --white:#f7f8f5;
+      --muted:#a9b0aa;
+      --shadow:0 25px 80px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Cairo",sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%,rgba(126,222,44,.11),transparent 25%),
+        radial-gradient(circle at 10% 55%,rgba(216,183,92,.06),transparent 25%),
+        var(--bg);
+      color:var(--white);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      background:rgba(5,7,8,.72);backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
+    .brand-mark{width:42px;height:42px;border-radius:12px;object-fit:cover}
+    .brand span{color:var(--green)}
+    .links{display:flex;gap:26px;color:#cbd0cc;font-size:14px}
+    .links a{transition:.25s}.links a:hover{color:var(--green)}
+    .nav-cta,.btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      border-radius:12px;padding:12px 18px;font-weight:800;
+      transition:.25s;border:1px solid transparent
+    }
+    .nav-cta,.btn-primary{background:linear-gradient(135deg,var(--green),#65bd27);color:#071006;box-shadow:0 10px 30px rgba(142,229,47,.15)}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px)}
+    .btn-outline{border-color:rgba(142,229,47,.35);color:var(--green);background:rgba(142,229,47,.04)}
+    .hero{min-height:100vh;display:grid;place-items:center;padding:130px 0 80px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(142,229,47,.05);padding:8px 13px;border-radius:999px;color:var(--green);font-size:13px;margin-bottom:22px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}
+    h1{font-size:clamp(44px,6vw,76px);line-height:1.05;letter-spacing:-2px;margin-bottom:22px}
+    h1 .green{color:var(--green)}
+    .hero p{font-size:18px;line-height:2;color:#b9c0ba;max-width:690px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-card{
+      position:relative;border:1px solid rgba(142,229,47,.18);
+      background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+      border-radius:30px;padding:24px;box-shadow:var(--shadow);
+    }
+    .hero-card img{width:100%;display:block;border-radius:20px}
+    .floating{
+      position:absolute;bottom:-22px;right:-22px;background:#0c120d;
+      border:1px solid rgba(216,183,92,.28);border-radius:18px;padding:16px 20px;
+      box-shadow:var(--shadow)
+    }
+    .floating b{display:block;color:var(--gold);font-size:25px}
+    .floating small{color:#aeb4ae}
+    section{padding:95px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+    .kicker{color:var(--green);font-size:13px;font-weight:800;letter-spacing:1px}
+    h2{font-size:clamp(30px,4vw,46px);margin-top:8px}
+    .section-head p{max-width:560px;color:var(--muted);line-height:1.9}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      padding:27px;border:1px solid rgba(255,255,255,.07);
+      background:var(--card);border-radius:22px;transition:.3s;
+    }
+    .card:hover{transform:translateY(-6px);border-color:rgba(142,229,47,.28)}
+    .icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:rgba(142,229,47,.09);color:var(--green);font-size:22px;margin-bottom:18px}
+    .card h3{font-size:19px;margin-bottom:10px}.card p{color:var(--muted);line-height:1.85;font-size:14px}
+    .offer{
+      position:relative;overflow:hidden;
+      background:linear-gradient(135deg,#101a11,#09100b);
+      border:1px solid rgba(142,229,47,.25);border-radius:30px;padding:45px;
+    }
+    .offer:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(142,229,47,.08);left:-110px;top:-150px;filter:blur(10px)}
+    .offer-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center;position:relative}
+    .offer h2{font-size:clamp(32px,4vw,52px)} .price{font-size:58px;font-weight:900;color:var(--green);line-height:1.1;margin:14px 0}
+    .price span{font-size:17px;color:#b5bcb6;font-weight:600}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0}
+    .feature{padding:12px;border-radius:12px;background:rgba(255,255,255,.035);color:#dfe4df;font-size:14px}
+    .feature::before{content:"✓";color:var(--green);font-weight:900;margin-left:8px}
+    .gift{padding:22px;border-radius:18px;background:rgba(216,183,92,.07);border:1px solid rgba(216,183,92,.2);color:#e5e0d2;line-height:1.9}
+    .gift strong{color:var(--gold)}
+    .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}
+    .contact-card{padding:30px;border-radius:24px;background:var(--card);border:1px solid rgba(255,255,255,.07)}
+    .contact-card h3{font-size:22px;margin-bottom:12px}.contact-card p{color:var(--muted);line-height:1.9}
+    .socials{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+    .social{padding:14px 15px;border:1px solid rgba(255,255,255,.08);border-radius:14px;color:#dce1dc;display:flex;align-items:center;gap:10px;transition:.25s}
+    .social:hover{border-color:rgba(142,229,47,.35);color:var(--green)}
+    .whatsapp{font-size:26px;color:var(--green);font-weight:900}
+
+    .social-icon{
+      width:24px;height:24px;flex:0 0 24px;
+      display:grid;place-items:center;
+      color:currentColor;
+    }
+    .social-icon svg{width:100%;height:100%;display:block;fill:currentColor}
+    .social:hover .social-icon{transform:scale(1.08)}
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:28px 0;color:#858d87;text-align:center;font-size:13px}
+    .reveal{animation:reveal .8s ease both}
+    @keyframes reveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    @media(max-width:850px){
+      .links{display:none}.hero-grid,.offer-grid,.contact{grid-template-columns:1fr}
+      .hero{padding-top:110px}.cards{grid-template-columns:1fr 1fr}.section-head{display:block}
+    }
+    @media(max-width:560px){
+      .nav-inner{height:68px}
+      .nav-cta{padding:9px 12px;font-size:12px}
+
+      h1{letter-spacing:-1px}
+      .hero p{font-size:15px}
+      .cards{grid-template-columns:1fr}
+
+      /* إصلاح بطاقة الشعار في الموبايل */
+      .hero-card{
+        padding:12px;
+        margin-top:8px;
+        border-radius:22px;
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+      }
+      .hero-card img{
+        width:100%;
+        height:auto;
+        aspect-ratio:1/1;
+        object-fit:contain;
+        border-radius:14px;
+      }
+
+      /* منع بطاقة ROUYA العائمة من الخروج خارج الشاشة */
+      .floating{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin:10px 0 0;
+        text-align:center;
+        border-radius:14px;
+        padding:10px 14px;
+        box-shadow:none;
+      }
+      .floating b{font-size:19px}
+      .floating small{font-size:12px}
+
+      .offer{padding:27px 20px}
+      .features{grid-template-columns:1fr}
+      .socials{grid-template-columns:1fr}
+      section{padding:70px 0}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">
+      <img class="brand-mark" src="logo.jpg" alt="ROUYA" onerror="this.style.display='none'">
+      <div>ROUYA <span>| رؤية</span></div>
+    </a>
+    <div class="links">
+      <a href="#about">من نحن</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#offer">العرض</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+    <a class="nav-cta" href="https://wa.me/201271117223" target="_blank" rel="noopener noreferrer">تواصل واتساب</a>
+  </div>
+</nav>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span> التسويق الرياضي المبني على البيانات</div>
+        <h1>نحوّل <span class="green">الرؤية</span><br>إلى نمو.</h1>
+        <p>
+          في ROUYA Sports Marketing نساعد المؤسسات والأنشطة الرياضية على بناء حضور أقوى،
+          فهم الجمهور، تطوير العلامة التجارية، وتحويل الاستراتيجية والإبداع إلى نتائج قابلة للقياس.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/201271117223" target="_blank" rel="noopener noreferrer">ابدأ مشروعك الآن ↗</a>
+          <a class="btn btn-outline" href="#services">اكتشف خدماتنا</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <img src="logo.jpg" alt="شعار رؤية للتسويق الرياضي">
+        <div class="floating"><b>ROUYA</b><small>Sports Marketing</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">WHY ROUYA</div><h2>رؤية أوضح. قرارات أذكى.</h2></div>
+        <p>النجاح الرياضي لا يعتمد على الأداء داخل الملعب فقط، بل على القدرة على بناء العلامة التجارية، فهم الجمهور، واتخاذ القرارات بناءً على البيانات.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="icon">◉</div><h3>رؤية واضحة</h3><p>نبدأ بفهم النشاط والجمهور والسوق للوصول إلى اتجاه تسويقي واضح.</p></div>
+        <div class="card"><div class="icon">↗</div><h3>استراتيجيات ذكية</h3><p>نحوّل البيانات والرؤى إلى خطط تسويقية عملية تساعد على النمو.</p></div>
+        <div class="card"><div class="icon">◆</div><h3>نتائج قابلة للقياس</h3><p>نركز على تحسين الأداء والنتائج بدلًا من الاكتفاء بمحتوى جميل فقط.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">OUR SERVICES</div><h2>خدماتنا</h2></div>
+        <p>حلول متكاملة تساعد النشاط الرياضي على الظهور، النمو، وبناء علاقات أقوى مع جمهوره.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="icon">⌁</div><h3>تحليل البيانات والجمهور</h3><p>تحليل سلوك الجمهور والبيانات لاكتشاف فرص النمو وتحسين القرارات التسويقية.</p></div>
+        <div class="card"><div class="icon">✦</div><h3>الاستراتيجيات التسويقية</h3><p>بناء استراتيجيات تسويقية تناسب أهداف النشاط الرياضي وسوقه المستهدف.</p></div>
+        <div class="card"><div class="icon">▶</div><h3>المحتوى الرياضي</h3><p>إنتاج محتوى رياضي احترافي مصمم لجذب الانتباه وبناء الهوية.</p></div>
+        <div class="card"><div class="icon">◎</div><h3>التسويق الرقمي</h3><p>إدارة الحملات الإعلانية والتسويق الرقمي للوصول إلى الجمهور المناسب.</p></div>
+        <div class="card"><div class="icon">♢</div><h3>العلامات التجارية والشراكات</h3><p>بناء هوية أقوى وفتح فرص للشراكات والرعايات الرياضية.</p></div>
+        <div class="card"><div class="icon">⌁</div><h3>تحليل الأداء</h3><p>متابعة النتائج وتحديد نقاط التحسين للوصول إلى أداء تسويقي أفضل.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offer">
+    <div class="container">
+      <div class="offer">
+        <div class="offer-grid">
+          <div>
+            <div class="kicker">LIMITED OFFER</div>
+            <h2>فيديو إعلاني احترافي<br>بسعر خاص.</h2>
+            <div class="price">249 <span>درهم فقط</span></div>
+            <p style="color:#aeb6af;line-height:1.9">بدلًا من 450 درهم لفترة محدودة.</p>
+            <div class="features">
+              <div class="feature">تصميم فيديو احترافي</div>
+              <div class="feature">هوية بصرية مناسبة للنشاط</div>
+              <div class="feature">تعليق صوتي احترافي</div>
+              <div class="feature">مونتاج متكامل</div>
+              <div class="feature">Sound Effects احترافية</div>
+              <div class="feature">فيديو بهدف جذب العملاء</div>
+            </div>
+            <a class="btn btn-primary" href="https://wa.me/201271117223?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20ROUYA%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D8%A9%20%D9%85%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D9%8A%20%D8%A8%D9%80249%20%D8%AF%D8%B1%D9%87%D9%85." target="_blank" rel="noopener noreferrer">احجز العرض الآن ↗</a>
+          </div>
+          <div class="gift">
+            <strong>🎁 هدية من رؤية بمناسبة بداية تعاوننا</strong><br>
+            ننزل لك أول إعلان على Meta داخل الإمارات مجانًا وبدون أي عمولة، حتى تشوف بنفسك النتائج.
+            <br><br>
+            <strong>قيمة نشر الإعلان عادةً: 50 درهم</strong> — لكن أول إعلان علينا مجانًا.
+            <br><br>
+            <b style="color:#8ee52f">249 درهم فقط — محتوى احترافي + أول إعلان مجانًا. 🚀</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">LET'S WORK TOGETHER</div><h2>خلّي مشروعك يبدأ صح.</h2></div>
+        <p>جاهز تبني حضور أقوى لنشاطك الرياضي؟ تواصل معنا مباشرة أو تابع ROUYA على منصات التواصل.</p>
+      </div>
+      <div class="contact">
+        <div class="contact-card">
+          <div class="whatsapp">WhatsApp</div>
+          <h3>01271117223</h3>
+          <p>للاستفسار والحجز وطلب تفاصيل الخدمات والعروض.</p>
+          <a class="btn btn-primary" style="margin-top:20px;width:100%" href="https://wa.me/201271117223" target="_blank" rel="noopener noreferrer">مراسلة واتساب</a>
+        </div>
+        <div class="contact-card">
+          <h3>تابعنا على منصات التواصل</h3>
+          <p>اكتشف أعمالنا وآخر محتوى ROUYA Sports Marketing.</p>
+          <div class="socials">
+            <a class="social" href="https://www.linkedin.com/company/rouya-sports-marketing/" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.62 0 4.29 2.38 4.29 5.48v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.56 20.45h3.57V8.99H3.56v11.46z"/></svg>
+              </span>
+              LinkedIn
+            </a>
+            <a class="social" href="https://www.tiktok.com/@rouya_sports_marketing?_r=1&_t=ZS-98qidet0b9L" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-label="TikTok">
+                  <path d="M15.45 2h3.05c.18 1.66 1.08 3.19 2.5 4.12.8.53 1.72.83 2.67.87v3.13a8.15 8.15 0 0 1-5.17-1.84v7.1a6.62 6.62 0 1 1-5.72-6.56v3.28a3.43 3.43 0 1 0 2.64 3.33V2h.03z"/></svg>
+              </span>
+              TikTok
+            </a>
+            <a class="social" href="https://www.instagram.com/rouya_sports_marketing?igsh=MXF1eDY3bW0yYzlsaA==" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2zm9.85 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+              </span>
+              Instagram
+            </a>
+            <a class="social" href="https://www.facebook.com/share/19mkUUU5Vw/" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.75l.42-3.1H13.5V8.92c0-.9.25-1.52 1.56-1.52h1.68V4.63c-.29-.04-1.29-.13-2.46-.13-2.43 0-4.1 1.48-4.1 4.2v2.2H7.43V14h2.75v8h3.32z"/></svg>
+              </span>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 ROUYA | رؤية للتسويق الرياضي — نحول الرؤية إلى نمو.
+</footer>
+
+</body>
+</html>
